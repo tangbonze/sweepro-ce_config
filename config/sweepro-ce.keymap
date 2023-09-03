@@ -23,7 +23,7 @@
 
 &mt {
     flavor = "tap-preferred";
-    tapping_term_ms = <200>;
+    tapping_term_ms = <350>;
 };
 
 / {
@@ -33,6 +33,30 @@
             label = "KEYS";
             #binding-cells = <0>;
             bindings = <&kp LS(C) &kp H &kp L &kp DOT &kp N8 &kp N8 &kp N0 &kp N6 &kp N0 &kp N2 &kp EXCL &kp AT>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        esc {
+            bindings = <&kp ESC>;
+            key-positions = <0 1>;
+        };
+
+        bs {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <8 9>;
+        };
+
+        win {
+            bindings = <&kp LEFT_WIN>;
+            key-positions = <32 31>;
+        };
+
+        del {
+            bindings = <&kp DELETE>;
+            key-positions = <10 11>;
         };
     };
 
