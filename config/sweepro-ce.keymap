@@ -27,19 +27,69 @@
 };
 
 / {
+    macros {
+        keys: keys {
+            compatible = "zmk,behavior-macro";
+            label = "KEYS";
+            #binding-cells = <0>;
+            bindings = <&kp LS(C) &kp H &kp L &kp DOT &kp N8 &kp N8 &kp N0 &kp N6 &kp N0 &kp N2 &kp EXCL &kp AT>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             label = "QWRT";
             bindings = <
-         &kp Q      &kp W     &kp E      &kp R          &kp T         &kp Y  &kp U      &kp I       &kp O      &kp P
-         &kp A      &kp S     &kp D      &kp F          &kp G         &kp H  &kp J      &kp K       &kp L  &kp ENTER
-         &kp Z      &kp X     &kp C      &kp V          &kp B         &kp N  &kp M  &kp COMMA  &kp PERIOD  &kp SLASH
-  &kp NUMBER_1  &kp LSHFT  &kp LWIN  &kp SPACE  &kp BACKSPACE  &kp NUMBER_2
+       &kp Q             &kp W           &kp E            &kp R        &kp T    &kp Y  &kp U      &kp I       &kp O      &kp P
+       &kp A             &kp S           &kp D            &kp F        &kp G    &kp H  &kp J      &kp K       &kp L  &kp ENTER
+       &kp Z             &kp X           &kp C            &kp V        &kp B    &kp N  &kp M  &kp COMMA  &kp PERIOD  &kp SLASH
+  &kp C_MUTE  &mt LCTRL LSHIFT  &lt 1 LEFT_WIN  &lt 3 BACKSPACE  &lt 2 SPACE  &kp ESC
             >;
 
-            sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp UP DOWN>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>,
+                <&inc_dec_kp LEFT RIGHT_ARROW>;
+        };
+
+        layer_1 {
+            bindings = <
+  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3          &kp NUMBER_4  &kp NUMBER_5   &kp NUMBER_6      &kp NUMBER_7       &kp NUMBER_8    &kp NUMBER_9     &kp NUMBER_0
+     &kp MINUS     &kp EQUAL        &kp F2                &kp F5      &kp HOME    &kp PAGE_UP  &kp LEFT_BRACKET  &kp RIGHT_BRACKET   &kp SEMICOLON          &kp SQT
+    &kp DELETE  &kp CAPSLOCK         &keys  &kp NON_US_BACKSLASH       &kp END  &kp PAGE_DOWN      &kp UP_ARROW     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
+     &kp GRAVE     &kp ENTER         &none               &kp TAB     &kp SPACE      &kp GRAVE
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp 0 0>,
+                <&inc_dec_kp 0 0>;
+        };
+
+        layer_2 {
+            bindings = <
+  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)      &kp LS(NUMBER_6)      &kp LS(NUMBER_7)       &kp LS(NUMBER_8)   &kp LS(NUMBER_9)  &kp LS(NUMBER_0)
+     &kp LS(MINUS)     &kp LS(EQUAL)               &kp               &kp               &kp  &kp NON_US_BACKSLASH  &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &kp LS(SEMICOLON)       &kp LS(SQT)
+               &kp               &kp               &kp               &kp               &kp                   &kp                   &kp          &kp LS(COMMA)     &kp LS(PERIOD)     &kp LS(SLASH)
+     &kp LS(GRAVE)           &kp TAB      &kp LEFT_WIN               &kp             &none         &kp LS(GRAVE)
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp 0 0>,
+                <&inc_dec_kp 0 0>;
+        };
+
+        layer_3 {
+            bindings = <
+            &kp EQUAL  &kp LA(LC(W))  &kp LC(LEFT_SHIFT)  &kp LSHIFT     &kp LC(Y)    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9   &kp PLUS  &kp KP_MULTIPLY
+  &mt LA(LC(A)) LC(A)      &kp LC(S)           &kp LG(D)   &kp LC(F)     &kp LG(L)    &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS    &kp KP_DIVIDE
+            &kp LC(Z)      &kp LC(X)           &kp LC(C)   &kp LC(V)     &kp LC(B)    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &kp DOT          &kp TAB
+       &kp KP_NUMLOCK   &kp LEFT_WIN        &kp LEFT_ALT       &none  &kp NUMBER_0  &kp KP_NUMLOCK
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp 0 0>,
+                <&inc_dec_kp 0 0>;
         };
     };
 };
