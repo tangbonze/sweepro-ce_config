@@ -34,6 +34,18 @@
             #binding-cells = <0>;
             bindings = <&kp LS(C) &kp H &kp L &kp DOT &kp N8 &kp N8 &kp N0 &kp N6 &kp N0 &kp N2 &kp EXCL &kp AT>;
         };
+        phonenum: phonenum {
+            compatible = "zmk,behavior-macro";
+            label = "PHONENUM";
+            #binding-cells = <0>;
+            bindings = <&kp N1 &kp N3 &kp N3 &kp N0 &kp N2 &kp N1 &kp N0 &kp N1 &kp N7 &kp N1 &kp N5>;
+        };
+        IDnum: IDnum {
+            compatible = "zmk,behavior-macro";
+            label = "IDNUM";
+            #binding-cells = <0>;
+            bindings = <&kp N3 &kp N7 &kp N1 &kp N0 &kp N8 &kp N3 &kp N1 &kp N9 &kp N8 &kp N8 &kp N0 &kp N6 &kp N0 &kp N2 &kp N9 &kp N0 &kp N1 &kp N6>;
+        };
     };
 
     combos {
@@ -58,6 +70,41 @@
             bindings = <&kp DELETE>;
             key-positions = <10 11>;
         };
+
+        Lshift {
+            bindings = <&kp LSHFT>;
+            key-positions = <20 21>;
+        };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <29 28>;
+        };
+
+        enter {
+            bindings = <&kp LS(ENTER)>;
+            key-positions = <18 19>;
+        };
+
+        pageup {
+            bindings = <&kp PG_UP>;
+            key-positions = <16 17>;
+        };
+
+        pagedown {
+            bindings = <&kp PAGE_DOWN>;
+            key-positions = <26 27>;
+        };
+
+        home {
+            bindings = <&kp HOME>;
+            key-positions = <13 12>;
+        };
+
+        end {
+            bindings = <&kp END>;
+            key-positions = <22 23>;
+        };
     };
 
     keymap {
@@ -66,10 +113,10 @@
         default_layer {
             label = "QWRT";
             bindings = <
-       &kp Q             &kp W           &kp E        &kp R            &kp T    &kp Y  &kp U      &kp I       &kp O      &kp P
-       &kp A             &kp S           &kp D        &kp F            &kp G    &kp H  &kp J      &kp K       &kp L  &kp ENTER
-       &kp Z             &kp X           &kp C        &kp V            &kp B    &kp N  &kp M  &kp COMMA  &kp PERIOD  &kp SLASH
-  &kp C_MUTE  &mt LCTRL LSHIFT  &lt 1 LEFT_WIN  &lt 2 SPACE  &lt 3 BACKSPACE  &kp ESC
+&kp Q       &kp W           &kp E           &kp R      &kp T            &kp Y    &kp U  &kp I      &kp O       &kp P
+&kp A       &kp S           &kp D           &kp F      &lt 4 G          &lt 4 H  &kp J  &kp K      &kp L       &kp ENTER
+&kp Z       &kp X           &kp C           &kp V      &kp B            &kp N    &kp M  &kp COMMA  &kp PERIOD  &kp SLASH
+&kp C_MUTE  &lt 3 CAPSLOCK  &lt 1 LEFT_WIN  &kp SPACE  &lt 2 BACKSPACE  &kp ESC
             >;
 
             sensor-bindings =
@@ -79,10 +126,10 @@
 
         layer_1 {
             bindings = <
-  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3          &kp NUMBER_4  &kp NUMBER_5   &kp NUMBER_6      &kp NUMBER_7       &kp NUMBER_8    &kp NUMBER_9     &kp NUMBER_0
-     &kp MINUS     &kp EQUAL        &kp F2                &kp F5      &kp HOME    &kp PAGE_UP  &kp LEFT_BRACKET  &kp RIGHT_BRACKET   &kp SEMICOLON          &kp SQT
-    &kp DELETE  &kp CAPSLOCK         &keys  &kp NON_US_BACKSLASH       &kp END  &kp PAGE_DOWN      &kp UP_ARROW     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
-     &kp GRAVE     &kp ENTER         &none               &kp TAB     &kp SPACE      &kp GRAVE
+&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5   &kp NUMBER_6          &kp NUMBER_7      &kp NUMBER_8       &kp NUMBER_9    &kp NUMBER_0
+&kp MINUS     &kp EQUAL     &kp F2        &kp F5        &kp HOME       &kp NON_US_BACKSLASH  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SEMICOLON   &kp SQT
+&kp GRAVE     &IDnum        &keys         &phonenum     &kp END        &kp PAGE_DOWN         &kp UP_ARROW      &kp LEFT_ARROW     &kp DOWN_ARROW  &kp RIGHT_ARROW
+&none         &kp ENTER     &none         &kp SPACE     &kp BACKSPACE  &none
             >;
 
             sensor-bindings =
@@ -92,10 +139,10 @@
 
         layer_2 {
             bindings = <
-  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)      &kp LS(NUMBER_6)      &kp LS(NUMBER_7)       &kp LS(NUMBER_8)   &kp LS(NUMBER_9)  &kp LS(NUMBER_0)
-     &kp LS(MINUS)     &kp LS(EQUAL)             &none             &none             &none  &kp NON_US_BACKSLASH  &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &kp LS(SEMICOLON)       &kp LS(SQT)
-             &none             &none             &none             &none             &none                 &none                 &none          &kp LS(COMMA)     &kp LS(PERIOD)     &kp LS(SLASH)
-     &kp LS(GRAVE)           &kp TAB      &kp LEFT_WIN             &none             &none         &kp LS(GRAVE)
+&kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)  &kp LS(NUMBER_6)      &kp LS(NUMBER_7)      &kp LS(NUMBER_8)       &kp LS(NUMBER_9)   &kp LS(NUMBER_0)
+&kp LS(MINUS)     &kp LS(EQUAL)     &none             &none             &none             &kp NON_US_BACKSLASH  &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &kp LS(SEMICOLON)  &kp LS(SQT)
+&kp LS(GRAVE)     &none             &none             &none             &none             &none                 &none                 &kp LS(COMMA)          &kp LS(PERIOD)     &kp LS(SLASH)
+&none             &kp TAB           &kp LEFT_WIN      &none             &none             &none
             >;
 
             sensor-bindings =
@@ -105,15 +152,24 @@
 
         layer_3 {
             bindings = <
-            &kp EQUAL  &kp LA(LC(W))  &kp LC(LEFT_SHIFT)  &kp LSHIFT     &kp LC(Y)    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9   &kp PLUS  &kp KP_MULTIPLY
-  &mt LA(LC(A)) LC(A)      &kp LC(S)           &kp LG(D)   &kp LC(F)     &kp LG(L)    &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS    &kp KP_DIVIDE
-            &kp LC(Z)      &kp LC(X)           &kp LC(C)   &kp LC(V)     &kp LC(B)    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &kp DOT          &kp TAB
-       &kp KP_NUMLOCK   &kp LEFT_WIN        &kp LEFT_ALT       &none  &kp NUMBER_0  &kp KP_NUMLOCK
+&kp ESC              &kp LA(LC(W))  &kp LC(LEFT_SHIFT)  &none         &kp LC(Y)   &kp NUMBER_7    &kp NUMBER_8  &kp NUMBER_9  &kp PLUS   &kp KP_MULTIPLY
+&mt LA(LC(A)) LC(A)  &kp LC(S)      &kp LG(D)           &kp LC(F)     &kp LG(L)   &kp NUMBER_4    &kp NUMBER_5  &kp NUMBER_6  &kp MINUS  &kp KP_DIVIDE
+&kp LC(Z)            &kp LC(X)      &kp LC(C)           &kp LC(V)     &kp LC(B)   &kp NUMBER_1    &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL  &kp LA(TAB)
+&kp KP_NUMLOCK       &none          &none               &kp NUMBER_0  &kp PERIOD  &kp KP_NUMLOCK
             >;
 
             sensor-bindings =
                 <&inc_dec_kp 0 0>,
                 <&inc_dec_kp 0 0>;
+        };
+
+        layer_4 {
+            bindings = <
+&none  &none           &kp UP_ARROW    &none            &none  &none  &none     &kp UP_ARROW    &none      &none
+&none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none  &none  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &none
+&none  &none           &none           &none            &none  &none  &none     &none           &none      &none
+&none  &none           &none           &none            &none  &none
+            >;
         };
     };
 };
