@@ -113,10 +113,10 @@
         default_layer {
             label = "QWRT";
             bindings = <
-&kp Q       &kp W           &kp E           &kp R      &kp T            &kp Y    &kp U    &kp I      &kp O       &kp P
-&kp A       &kp S           &kp D           &lt 4 F    &kp G            &kp H    &lt 4 J  &kp K      &kp L       &kp ENTER
-&kp Z       &kp X           &kp C           &kp V      &kp B            &kp N    &kp M    &kp COMMA  &kp PERIOD  &kp SLASH
-&kp C_MUTE  &lt 3 CAPSLOCK  &lt 1 LEFT_WIN  &kp SPACE  &lt 2 BACKSPACE  &kp ESC
+  &kp Q       &kp W           &kp E           &kp R      &kp T            &kp Y    &kp U    &kp I      &kp O       &kp P
+  &kp A       &kp S           &kp D           &lt 4 F    &kp G            &kp H    &lt 4 J  &kp K      &kp L       &kp ENTER
+  &kp Z       &kp X           &mt LCTRL C     &kp V      &kp B            &kp N    &kp M    &kp COMMA  &kp PERIOD  &kp SLASH
+  &kp C_MUTE  &lt 3 CAPSLOCK  &lt 1 LEFT_WIN  &kp SPACE  &lt 2 BACKSPACE  &kp ESC
             >;
 
             sensor-bindings =
@@ -126,10 +126,10 @@
 
         layer_1 {
             bindings = <
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5   &kp NUMBER_6          &kp NUMBER_7      &kp NUMBER_8       &kp NUMBER_9    &kp NUMBER_0
-&kp MINUS     &kp EQUAL     &kp F2        &kp F5        &kp HOME       &kp NON_US_BACKSLASH  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SEMICOLON   &kp SQT
-&kp GRAVE     &IDnum        &keys         &phonenum     &kp END        &kp PAGE_DOWN         &kp UP_ARROW      &kp LEFT_ARROW     &kp DOWN_ARROW  &kp RIGHT_ARROW
-&none         &kp ENTER     &none         &kp SPACE     &kp BACKSPACE  &none
+  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5   &kp NUMBER_6          &kp NUMBER_7      &kp NUMBER_8       &kp NUMBER_9    &kp NUMBER_0
+  &kp MINUS     &kp EQUAL     &kp F2        &kp F5        &kp HOME       &kp NON_US_BACKSLASH  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SEMICOLON   &kp SQT
+  &kp GRAVE     &IDnum        &keys         &phonenum     &kp END        &kp PAGE_DOWN         &kp UP_ARROW      &kp LEFT_ARROW     &kp DOWN_ARROW  &kp RIGHT_ARROW
+  &none         &kp ENTER     &none         &kp SPACE     &kp BACKSPACE  &none
             >;
 
             sensor-bindings =
@@ -139,10 +139,10 @@
 
         layer_2 {
             bindings = <
-&kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)  &kp LS(NUMBER_6)      &kp LS(NUMBER_7)      &kp LS(NUMBER_8)       &kp LS(NUMBER_9)   &kp LS(NUMBER_0)
-&kp LS(MINUS)     &kp LS(EQUAL)     &none             &none             &none             &kp NON_US_BACKSLASH  &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &kp LS(SEMICOLON)  &kp LS(SQT)
-&kp LS(GRAVE)     &none             &none             &none             &none             &none                 &none                 &kp LS(COMMA)          &kp LS(PERIOD)     &kp LS(SLASH)
-&none             &kp ENTER         &none             &kp SPACE         &none             &none
+  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)  &kp LS(NUMBER_6)      &kp LS(NUMBER_7)      &kp LS(NUMBER_8)       &kp LS(NUMBER_9)   &kp LS(NUMBER_0)
+  &kp LS(MINUS)     &kp LS(EQUAL)     &none             &none             &none             &kp NON_US_BACKSLASH  &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &kp LS(SEMICOLON)  &kp LS(SQT)
+  &kp LS(GRAVE)     &none             &none             &none             &none             &none                 &none                 &kp LS(COMMA)          &kp LS(PERIOD)     &kp LS(SLASH)
+  &none             &kp ENTER         &none             &kp SPACE         &none             &none
             >;
 
             sensor-bindings =
@@ -152,10 +152,10 @@
 
         layer_3 {
             bindings = <
-&kp ESC              &kp LA(LC(W))  &kp LC(LEFT_SHIFT)  &kp LC(Y)     &kp LG(TAB)  &kp NUMBER_7    &kp NUMBER_8  &kp NUMBER_9  &kp PLUS   &kp KP_MULTIPLY
-&mt LA(LC(A)) LC(A)  &kp LC(S)      &kp LG(D)           &kp LC(F)     &kp LG(L)    &kp NUMBER_4    &kp NUMBER_5  &kp NUMBER_6  &kp MINUS  &kp KP_DIVIDE
-&kp LC(Z)            &kp LC(X)      &kp LC(C)           &kp LC(V)     &kp LC(B)    &kp NUMBER_1    &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL  &kp LA(TAB)
-&kp KP_NUMLOCK       &none          &kp ENTER           &kp NUMBER_0  &kp PERIOD   &kp KP_NUMLOCK
+  &kp ESC              &kp LA(LC(W))  &kp LC(LEFT_SHIFT)  &kp LC(Y)     &kp LG(TAB)  &kp NUMBER_7    &kp NUMBER_8  &kp NUMBER_9  &kp PLUS   &kp KP_MULTIPLY
+  &mt LA(LC(A)) LC(A)  &kp LC(S)      &kp LG(D)           &kp LC(F)     &kp LG(L)    &kp NUMBER_4    &kp NUMBER_5  &kp NUMBER_6  &kp MINUS  &kp KP_DIVIDE
+  &kp LC(Z)            &kp LC(X)      &kp LC(C)           &kp LC(V)     &kp LC(B)    &kp NUMBER_1    &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL  &kp LA(TAB)
+  &kp KP_NUMLOCK       &none          &kp ENTER           &kp NUMBER_0  &kp PERIOD   &kp KP_NUMLOCK
             >;
 
             sensor-bindings =
@@ -165,10 +165,10 @@
 
         layer_4 {
             bindings = <
-&none  &none           &kp UP_ARROW    &none            &none  &none  &none     &kp UP_ARROW    &none      &none
-&none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none  &none  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &none
-&none  &none           &none           &none            &none  &none  &none     &none           &none      &none
-&none  &none           &none           &none            &none  &none
+  &none  &none           &kp UP_ARROW    &none            &none  &none  &none     &kp UP_ARROW    &none      &none
+  &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none  &none  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &none
+  &none  &none           &none           &none            &none  &none  &none     &none           &none      &none
+  &none  &none           &none           &none            &none  &none
             >;
         };
     };
