@@ -98,12 +98,12 @@
 
         home {
             bindings = <&kp HOME>;
-            key-positions = <13 12>;
+            key-positions = <2 3>;
         };
 
         end {
             bindings = <&kp END>;
-            key-positions = <22 23>;
+            key-positions = <12 13>;
         };
     };
 
