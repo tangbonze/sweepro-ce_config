@@ -88,12 +88,12 @@
 
         pageup {
             bindings = <&kp PG_UP>;
-            key-positions = <16 17>;
+            key-positions = <6 7>;
         };
 
         pagedown {
             bindings = <&kp PAGE_DOWN>;
-            key-positions = <26 27>;
+            key-positions = <16 17>;
         };
 
         home {
