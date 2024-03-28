@@ -3,9 +3,6 @@
  *
  * SPDX-License-Identifier: MIT
  */
-
-#include <behaviors.dtsi>
-
 /*
  * Copyright (c) 2020 The ZMK Contributors
  *
@@ -34,19 +31,9 @@
             compatible = "zmk,behavior-macro";
             label = "KEYS";
             #binding-cells = <0>;
-            bindings = <&kp LS(C) &kp H &kp L &kp DOT &kp N8 &kp N8 &kp N0 &kp N6 &kp N0 &kp N2 &kp EXCL &kp AT &kp LS(NUMBER_3) &kp ENTER>;
-        };
-        phonenum: phonenum {
-            compatible = "zmk,behavior-macro";
-            label = "PHONENUM";
-            #binding-cells = <0>;
-            bindings = <&kp N1 &kp N3 &kp N3 &kp N0 &kp N2 &kp N1 &kp N0 &kp N1 &kp N7 &kp N1 &kp N5>;
-        };
-        IDnum: IDnum {
-            compatible = "zmk,behavior-macro";
-            label = "IDNUM";
-            #binding-cells = <0>;
-            bindings = <&kp N3 &kp N7 &kp N1 &kp N0 &kp N8 &kp N3 &kp N1 &kp N9 &kp N8 &kp N8 &kp N0 &kp N6 &kp N0 &kp N2 &kp N9 &kp N0 &kp N1 &kp N6>;
+            bindings = <&kp LS(C) &kp H &kp L &kp DOT &kp N8 &kp N8 &kp N0 &kp N6 &kp N0 &kp N2 &kp EXCL &kp AT &kp HASH &kp DOLLAR &kp PERCENT &kp ENTER>;
+            wait-ms = <10>;
+            tap-ms = <10>;
         };
     };
 
@@ -128,10 +115,10 @@
 
         layer_1 {
             bindings = <
-  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5   &kp NUMBER_6   &kp NUMBER_7      &kp NUMBER_8       &kp NUMBER_9    &kp NUMBER_0
-  &kp MINUS     &kp EQUAL     &kp F2        &kp F5        &kp HOME       &kp BSLH       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SEMICOLON   &kp SQT
-  &kp GRAVE     &IDnum        &keys         &phonenum     &kp END        &kp PAGE_DOWN  &kp UP_ARROW      &kp LEFT_ARROW     &kp DOWN_ARROW  &kp RIGHT_ARROW
-  &none         &kp ENTER     &none         &kp SPACE     &kp BACKSPACE  &none
+  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5     &kp NUMBER_6   &kp NUMBER_7      &kp NUMBER_8       &kp NUMBER_9    &kp NUMBER_0
+  &kp MINUS     &kp EQUAL     &kp F2        &kp F5        &kp HOME         &kp BSLH       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SEMICOLON   &kp SQT
+  &kp GRAVE     &kp K_MUTE    &keys         &kp C_VOL_DN  &kp C_VOLUME_UP  &kp PAGE_DOWN  &kp UP_ARROW      &kp LEFT_ARROW     &kp DOWN_ARROW  &kp RIGHT_ARROW
+  &none         &kp ENTER     &none         &kp SPACE     &kp BACKSPACE    &none
             >;
 
             sensor-bindings =
@@ -152,7 +139,7 @@
 
         layer_3 {
             bindings = <
-  &kp ESC              &kp LA(LC(W))  &kp LC(LEFT_SHIFT)  &kp LC(Y)     &kp LG(TAB)  &kp NUMBER_7    &kp NUMBER_8  &kp NUMBER_9  &kp PLUS   &kp KP_MULTIPLY
+  &kp LC(J)            &kp LA(LC(W))  &kp LC(LEFT_SHIFT)  &kp LC(Y)     &kp LG(TAB)  &kp NUMBER_7    &kp NUMBER_8  &kp NUMBER_9  &kp PLUS   &kp KP_MULTIPLY
   &mt LA(LC(A)) LC(A)  &kp LC(S)      &kp LG(D)           &kp LC(F)     &kp LG(L)    &kp NUMBER_4    &kp NUMBER_5  &kp NUMBER_6  &kp MINUS  &kp KP_DIVIDE
   &kp LC(Z)            &kp LC(X)      &kp LC(C)           &kp LC(V)     &kp LC(B)    &kp NUMBER_1    &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL  &kp LA(TAB)
   &kp KP_NUMLOCK       &none          &kp ENTER           &kp NUMBER_0  &kp PERIOD   &kp KP_NUMLOCK
