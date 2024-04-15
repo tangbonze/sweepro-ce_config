@@ -26,17 +26,6 @@
 };
 
 / {
-    macros {
-        keys: keys {
-            compatible = "zmk,behavior-macro";
-            label = "KEYS";
-            #binding-cells = <0>;
-            bindings = <&kp LS(C) &kp H &kp L &kp DOT &kp N8 &kp N8 &kp N0 &kp N6 &kp N0 &kp N2 &kp EXCL &kp AT &kp HASH &kp DOLLAR &kp PERCENT &kp ENTER>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-        };
-    };
-
     combos {
         compatible = "zmk,combos";
 
