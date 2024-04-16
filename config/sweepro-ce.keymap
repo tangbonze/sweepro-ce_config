@@ -26,62 +26,14 @@
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
+    combos { compatible = "zmk,combos"; };
 
-        esc {
-            bindings = <&kp ESC>;
-            key-positions = <0 1>;
-        };
-
-        bs {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <8 9>;
-        };
-
-        win {
-            bindings = <&kp LEFT_WIN>;
-            key-positions = <32 31>;
-        };
-
-        del {
-            bindings = <&kp DELETE>;
-            key-positions = <10 11>;
-        };
-
-        caps {
-            bindings = <&kp CAPSLOCK>;
-            key-positions = <20 21>;
-        };
-
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <29 28>;
-        };
-
-        enter {
-            bindings = <&kp ENTER>;
-            key-positions = <18 19>;
-        };
-
-        pageup {
-            bindings = <&kp PG_UP>;
-            key-positions = <6 7>;
-        };
-
-        pagedown {
-            bindings = <&kp PAGE_DOWN>;
-            key-positions = <16 17>;
-        };
-
-        home {
-            bindings = <&kp HOME>;
-            key-positions = <2 3>;
-        };
-
-        end {
-            bindings = <&kp END>;
-            key-positions = <12 13>;
+    macros {
+        quicker: quicker {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp LCTRL>;
+            label = "QUICKER";
         };
     };
 
@@ -105,7 +57,7 @@
         layer_1 {
             bindings = <
   &kp NUMBER_1    &kp NUMBER_2    &kp NUMBER_3  &kp NUMBER_4     &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_7     &kp NUMBER_8  &kp NUMBER_9   &kp NUMBER_0
-  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none         &none         &kp RIGHT_SHIFT  &kp LCTRL     &kp RIGHT_ALT  &kp RIGHT_WIN
+  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &quicker      &none         &kp RIGHT_SHIFT  &kp LCTRL     &kp RIGHT_ALT  &kp RIGHT_WIN
   &none           &none           &none         &none            &none         &none         &none            &trans        &trans         &none
   &none           &trans          &trans        &trans           &trans        &none
             >;
